@@ -34,10 +34,6 @@ _StackBase:
 _StackSize:
   .quad FixedPcdGet32(PcdPrePiStackSize)
 
-_FB_ADDR:
-  .quad FixedPcdGet32(PcdMipiFrameBufferAddress)
-
-
 _ModuleEntryPoint:
   mov r0, #0
   bl ASM_PFX(ArmReadMpidr)
@@ -53,20 +49,6 @@ _ModuleEntryPoint:
   
   /* Invalidate TLB */
   bl ASM_PFX(ArmInvalidateTlb)
-
-  /*
-  ldr r1, =0xFD901E14 //Address to write new fb address to
-  ldr r2, _FB_ADDR //Starting address of new fb
-  str r2, [r1]
-
-  ldr r1, =0xFD900618 //CTL0_FLUSH
-  ldr r2, =0x00000001 //FLUSH_VIG0
-  str r2, [r1]
-
-  ldr r1, =0xFD900718 //CTL1_FLUSH
-  ldr r2, =0x00000001 //FLUSH_VIG0
-  str r2, [r1]
-  */
  
 _SetupExceptionVector:
   LoadConstantToReg (FixedPcdGet32(PcdCpuVectorBaseAddress), r0)
