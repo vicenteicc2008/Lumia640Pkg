@@ -47,6 +47,9 @@
 #define FB_ADDR                 0x400000
 #endif
 
+#define FB_ADDR_REG             0xFD901E14
+#define FB_NEW_ADDR             FixedPcdGet32(PcdMipiFrameBufferAddress)
+
 UINT64 mSystemMemoryEnd = FixedPcdGet64(PcdSystemMemoryBase) +
                           FixedPcdGet64(PcdSystemMemorySize) - 1;
 
@@ -56,6 +59,12 @@ UartInit
     VOID
 )
 {
+    // Move Framebuffer to the top
+    MmioWrite32(FB_ADDR_REG,FB_NEW_ADDR);
+    // Flush using CTL0_FLUSH and Flush VIG0
+    MmioWrite32(0xfd900618,0x00000001);
+    MmioWrite32(0xfd900718,0x00000001); 
+
     SerialPortInitialize();
     DEBUG ((EFI_D_ERROR, "\nTianoCore on Nokia Lumia 930 (ARM)\n"));
     DEBUG ((EFI_D_ERROR,  "Firmware version %s built %a %a\n\n",
@@ -63,6 +72,12 @@ UartInit
 			        __TIME__,
 				__DATE__
 	));
+
+  DEBUG((
+        EFI_D_INFO | EFI_D_LOAD,
+        "SRC0 at 0x%p\n",
+        MmioRead32(0xFD901EA4)
+  )); 
 }
 
 VOID
@@ -104,7 +119,7 @@ Main
 
     DEBUG((
         EFI_D_INFO | EFI_D_LOAD,
-	"UEFI Memory Base = 0x%p, Size = 0x%p, Stack Base = 0x%p, Stack Size = 0x%p\n",
+        "UEFI Memory Base = 0x%p, Size = 0x%p, Stack Base = 0x%p, Stack Size = 0x%p\n",
         UefiMemoryBase,
         UefiMemorySize,
         StackBase,
@@ -130,6 +145,22 @@ Main
     }
     DEBUG((EFI_D_INFO | EFI_D_LOAD, "GIC configured\n"));
 
+    DEBUG((
+        EFI_D_INFO | EFI_D_LOAD,
+        "SRC0_addrs 0= 0x%p, 1 = 0x%p, 2 = 0x%p, 3 = 0x%p\n 4 = 0x%p\n",
+        MmioRead32(0xFD901E14),
+        MmioRead32(0xFD902214),
+        MmioRead32(0xFD902A14),
+        MmioRead32(0xFD902E14),
+        MmioRead32(0xFD990008)
+  ));
+
+  // Create the Stacks HOB (reserve the memory for all stacks)
+
+
+  BuildStackHob ((UINTN)StackBase, StackSize);
+
+  //TODO: Call CpuPei as a library
   BuildCpuHob (ArmGetPhysicalAddressBits (), PcdGet8 (PcdPrePiCpuIoSize));
   // Store timer value logged at the beginning of firmware image execution
   //Performance.ResetEnd = GetTimeInNanoSecond (StartTimeStamp);
