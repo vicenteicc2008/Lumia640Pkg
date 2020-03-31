@@ -29,8 +29,8 @@
 #ifndef __MSM8226_CLOCK_H
 #define __MSM8226_CLOCK_H
 
-#include <clock.h>
-#include <clock_lib2.h>
+#include <Chipset/clock.h>
+#include <Chipset/clock_lib2.h>
 
 #define UART_DM_CLK_RX_TX_BIT_RATE 0xCC
 
