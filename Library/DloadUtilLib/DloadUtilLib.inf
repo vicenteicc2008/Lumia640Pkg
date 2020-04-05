@@ -12,4 +12,4 @@
 [Packages]
   MdePkg/MdePkg.dec
   ArmPkg/ArmPkg.dec
-  Lumia830Pkg/Lumia830Pkg.dec
+  Lumia930Pkg/Lumia930Pkg.dec

@@ -11,7 +11,7 @@
 [Packages]
   MdePkg/MdePkg.dec
   ArmPkg/ArmPkg.dec
-  Lumia830Pkg/Lumia830Pkg.dec
+  Lumia930Pkg/Lumia930Pkg.dec
 
 [LibraryClasses]
   ArmLib
@@ -22,9 +22,9 @@
   CacheMaintenanceLib
 
 [Pcd]
-  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
-  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
-  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
-  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
-  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
-  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight
+  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
+  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
+  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
+  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
+  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight
