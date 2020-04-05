@@ -299,8 +299,8 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4 = {
 CHAR8 *mProcessorInfoType4Strings[] = {
   "Socket",
   "Qualcomm Inc.",
-  "Qualcomm Snapdragon 800 Processor (8974)",
-  "MSM8974",
+  "Qualcomm Snapdragon 800 Processor (8926)",
+  "MSM8926",
   NULL
 };
 

@@ -26,8 +26,8 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __IRQS_MSM8974_H
-#define __IRQS_MSM8974_H
+#ifndef __IRQS_MSM8926_H
+#define __IRQS_MSM8926_H
 
 /* MSM ACPU Interrupt Numbers */
 
@@ -62,5 +62,5 @@
 
 #define NR_IRQS                                (NR_MSM_IRQS + NR_GPIO_IRQS + \
                                                NR_BOARD_IRQS)
-#endif	/* __IRQS_MSM8974_H */
+#endif	/* __IRQS_MSM8926_H */
  

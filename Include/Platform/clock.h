@@ -26,8 +26,8 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __MSM8974_CLOCK_H
-#define __MSM8974_CLOCK_H
+#ifndef __MSM8926_CLOCK_H
+#define __MSM8926_CLOCK_H
 
 #include <Chipset/clock.h>
 #include <Chipset/clock_lib2.h>
