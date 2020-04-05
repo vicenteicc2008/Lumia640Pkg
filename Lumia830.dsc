@@ -20,29 +20,29 @@
 #
 ################################################################################
 [Defines]
-  PLATFORM_NAME                  = Lumia930
+  PLATFORM_NAME                  = Lumia830
   PLATFORM_GUID                  = 566ba710-0bee-48e0-b56e-dcf4b0a38e04
   PLATFORM_VERSION               = 0.1
   DSC_SPECIFICATION              = 0x00010005
-  OUTPUT_DIRECTORY               = Build/Lumia930-$(ARCH)
+  OUTPUT_DIRECTORY               = Build/Lumia830-$(ARCH)
   SUPPORTED_ARCHITECTURES        = ARM
   BUILD_TARGETS                  = DEBUG|RELEASE
   SKUID_IDENTIFIER               = DEFAULT
-  FLASH_DEFINITION               = Lumia930Pkg/Lumia930.fdf
+  FLASH_DEFINITION               = Lumia830Pkg/Lumia830.fdf
 
 
 [PcdsFixedAtBuild.common]
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x40000000         # 1GB
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x00000000
   gArmPlatformTokenSpaceGuid.PcdCoreCount|4
-  gLumia930PkgTokenSpaceGuid.PcdPreAllocatedMemorySize|0x3CD00000 #0FF00000
-  gLumia930PkgTokenSpaceGuid.PcdUefiMemPoolSize|0x03300000
+  gLumia830PkgTokenSpaceGuid.PcdPreAllocatedMemorySize|0x3CD00000 #0FF00000
+  gLumia830PkgTokenSpaceGuid.PcdUefiMemPoolSize|0x03300000
 
   # Default resolution for this firmware can be seen in dec file, override here for specific platform configuration if needed
-  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferWidth|720
-  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|1280
-  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|720
-  gLumia930PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|1280
+  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferWidth|720
+  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|1280
+  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|720
+  gLumia830PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|1280
 
 [PcdsDynamicDefault.common]
   #
@@ -56,4 +56,4 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|160
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|37
 
-!include Lumia930Pkg/Shared.dsc.inc
+!include Lumia830Pkg/Shared.dsc.inc

@@ -54,15 +54,15 @@ READ_LOCK_STATUS   = TRUE
   INF EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf
 
   # SoC Drivers (Cross-referenced from EFIDroid and Ben)
-  INF Lumia930Pkg/Driver/BamDxe/BamDxe.inf
-  INF Lumia930Pkg/GPLDriver/GpioTlmmDxe/GpioTlmmDxe.inf
-  INF Lumia930Pkg/GPLDriver/GpioTlmmInterruptDxe/GpioTlmmInterruptDxe.inf
-  INF Lumia930Pkg/Driver/SpmiDxe/SpmiDxe.inf
-  INF Lumia930Pkg/Driver/Pm8x41Dxe/Pm8x41Dxe.inf
-  INF Lumia930Pkg/Driver/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
-  INF Lumia930Pkg/Driver/KeypadDxe/KeypadDxe.inf
-  INF Lumia930Pkg/Driver/ClockDxe/ClockDxe.inf
-  INF Lumia930Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
+  INF Lumia830Pkg/Driver/BamDxe/BamDxe.inf
+  INF Lumia830Pkg/GPLDriver/GpioTlmmDxe/GpioTlmmDxe.inf
+  INF Lumia830Pkg/GPLDriver/GpioTlmmInterruptDxe/GpioTlmmInterruptDxe.inf
+  INF Lumia830Pkg/Driver/SpmiDxe/SpmiDxe.inf
+  INF Lumia830Pkg/Driver/Pm8x41Dxe/Pm8x41Dxe.inf
+  INF Lumia830Pkg/Driver/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
+  INF Lumia830Pkg/Driver/KeypadDxe/KeypadDxe.inf
+  INF Lumia830Pkg/Driver/ClockDxe/ClockDxe.inf
+  INF Lumia830Pkg/Driver/SdhciMMCHSDxe/SdhciMMCHS.inf
 
   # Runtime Services
   INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
@@ -75,7 +75,7 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
 
   # Graphics
-  INF Lumia930Pkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
+  INF Lumia830Pkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
 
   # BDS
   INF MdeModulePkg/Universal/PrintDxe/PrintDxe.inf
@@ -90,7 +90,7 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
   INF MdeModulePkg/Application/UiApp/UiApp.inf
-  INF Lumia930Pkg/Driver/LogoDxe/LogoDxe.inf
+  INF Lumia830Pkg/Driver/LogoDxe/LogoDxe.inf
 
   # Disk IO
   INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
@@ -112,7 +112,7 @@ READ_LOCK_STATUS   = TRUE
   # INF NetworkPkg/Udp4Dxe/Udp4Dxe.inf
 
   #ACPI and SMBIOS
-  INF Lumia930Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
+  INF Lumia830Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
   # Shell
   INF ShellPkg/Application/Shell/Shell.inf
 
@@ -134,14 +134,14 @@ READ_STATUS        = TRUE
 READ_LOCK_CAP      = TRUE
 READ_LOCK_STATUS   = TRUE
 
-  INF Lumia930Pkg/PrePi/PrePi.inf
+  INF Lumia830Pkg/PrePi/PrePi.inf
 
   #
   # PI DXE Drivers producing Architectural Protocols (EFI Services)
   #
   FILE FREEFORM = a4c429b1-046a-4e7d-afbc-c6988e8fe7cc {
     SECTION UI = "platform.json"
-    SECTION RAW = Lumia930Pkg/Resources/Platform.json
+    SECTION RAW = Lumia830Pkg/Resources/Platform.json
   }
 
   FILE FV_IMAGE = 9E21FD93-9C72-4c15-8C4B-E77F1DB2D792 {
@@ -150,4 +150,4 @@ READ_LOCK_STATUS   = TRUE
     }
   }
 
-!include Lumia930.fdf.inc
+!include Lumia830.fdf.inc
