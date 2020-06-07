@@ -7,4 +7,5 @@ Edk2 boots correctly, but it is not capable of loading windows (just use unlocke
 # Thanks to : <br/>
  - Rick Liu for creating Lumia930Pkg<br/>
  - Konrad Dybcio for creating Lumia535Pkg, a guide how to port edk2 to lumias and for helping me out when I was stuck<br/>
+ - Imbushuo for creating BootShim<br/>
  - Heathcliff74 for creating WPInternals<br/>
