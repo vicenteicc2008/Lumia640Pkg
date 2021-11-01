@@ -9,5 +9,6 @@ A partially working kernel is available here : https://github.com/Dominduchami/l
 # Thanks to : <br/>
  - Rick Liu for creating Lumia930Pkg<br/>
  - Konrad Dybcio for creating Lumia535Pkg, a guide how to port edk2 to lumias and for helping me out when I was stuck<br/>
- - Imbushuo for creating BootShim<br/>
+ - Gustave Monce for telling me that rpmdxe driver is needed to bring up regulators on linux and helping me to get it to work<br/> 
+ - Imbushuo for creating BootShim and helping with memory adresses for rpmdxe<br/>
  - Heathcliff74 for creating WPInternals<br/>
