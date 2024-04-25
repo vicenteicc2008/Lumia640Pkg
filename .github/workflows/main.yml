@@ -36,11 +36,11 @@ jobs:
       run: |
         cd /home/runner/work/EDK2WorkDir/edk2 
         . /home/runner/work/EDK2WorkDir/edk2/edksetup.sh 
-        GCC5_ARM_PREFIX=arm-linux-gnueabihf- build -a ARM -p Lumia640Pkg/Lumia640.dsc -t GCC5 -j$(nproc) -s -n 0
+        GCC5_ARM_PREFIX=arm-linux-gnueabihf- build -a ARM -p Lumia830Pkg/Lumia830.dsc -t GCC5 -j$(nproc) -s -n 0
         
     - name: Create ELF binary
       run: |
-        cd /home/runner/work/EDK2WorkDir/edk2/Build/Lumia640-ARM/DEBUG_GCC5/FV 
+        cd /home/runner/work/EDK2WorkDir/edk2/Build/Lumia830-ARM/DEBUG_GCC5/FV 
         arm-linux-gnueabihf-objcopy -I binary -O elf32-littlearm --binary-architecture arm MSM8926_EFI.fd MSM8926_EFI.fd.elf && arm-linux-gnueabihf-ld MSM8926_EFI.fd.elf -T ../../../../Lumia640Pkg/FvWrapper.ld -o ../../../../../emmc_appsboot.mbn
       
     - uses: actions/upload-artifact@v3
