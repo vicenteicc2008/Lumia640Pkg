@@ -26,7 +26,7 @@ jobs:
       run: |
         cd /home/runner/work/EDK2WorkDir/
         git clone https://github.com/Tianocore/edk2.git -b stable/202011 --depth=1 --recursive 
-        git clone https://github.com/vicenteicc2008/Lumia640Pkg --depth=1 edk2/Lumia640Pkg
+        git clone https://github.com/vicenteicc2008/Lumia640Pkg --depth=1 edk2/Lumia830Pkg
   
     - name: Build BaseTools
       run: |
