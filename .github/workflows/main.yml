@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-20.04
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Update APT
       run: sudo apt update
       
@@ -41,9 +41,9 @@ jobs:
     - name: Create ELF binary
       run: |
         cd /home/runner/work/EDK2WorkDir/edk2/Build/Lumia830-ARM/DEBUG_GCC5/FV 
-        arm-linux-gnueabihf-objcopy -I binary -O elf32-littlearm --binary-architecture arm MSM8926_EFI.fd MSM8926_EFI.fd.elf && arm-linux-gnueabihf-ld MSM8926_EFI.fd.elf -T ../../../../Lumia640Pkg/FvWrapper.ld -o ../../../../../emmc_appsboot.mbn
+        arm-linux-gnueabihf-objcopy -I binary -O elf32-littlearm --binary-architecture arm MSM8926_EFI.fd MSM8926_EFI.fd.elf && arm-linux-gnueabihf-ld MSM8926_EFI.fd.elf -T ../../../../Lumia830Pkg/FvWrapper.ld -o ../../../../../emmc_appsboot.mbn
       
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
        name: Lumia 640
        path: /home/runner/work/EDK2WorkDir/emmc_appsboot.mbn
