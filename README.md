@@ -1,5 +1,5 @@
-# Lumia830Pkg
-WIP Custom ARM UEFI firmware for Lumia 830, based on Lumia830Pkg by rickliu : https://github.com/rickliu2000/Lumia930Pkg
+# Lumia640Pkg
+WIP Custom ARM UEFI firmware for Lumia 640 LTE but should work on 3G version, based on Lumia830Pkg by Dominduchami : https://github.com/Dominduchami/Lumia830Pkg
 
 # Current Status
 Edk2 boots correctly, but it is not capable of loading windows (just use unlocked stock uefi for that). 
@@ -8,6 +8,7 @@ A partially working kernel is available here : https://github.com/Mainline4Lumia
 
 # Thanks to : <br/>
  - Rick Liu for creating Lumia930Pkg<br/>
+ - Dominduchami for creating Lumia830Pkg<br/>
  - Konrad Dybcio for creating Lumia535Pkg, a guide how to port edk2 to lumias and for helping me out when I was stuck<br/>
  - Gustave Monce for telling me that rpmdxe driver is needed to bring up regulators on linux and helping me to get it to work<br/> 
  - Imbushuo for creating BootShim and helping with memory adresses for rpmdxe<br/>
