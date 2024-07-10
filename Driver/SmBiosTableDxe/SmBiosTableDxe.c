@@ -121,7 +121,7 @@ SMBIOS_TABLE_TYPE0 mBIOSInfoType0 = {
 };
 
 CHAR8 *mBIOSInfoType0Strings[] = {
-  "Mr Tunnel.", // Vendor String
+  "Bad Dodo (Bad Bunny).", // Vendor String
   "Built: " __DATE__,             // BiosVersion String
   "Built: " __DATE__,             // BiosReleaseDate String
   NULL
@@ -142,9 +142,9 @@ SMBIOS_TABLE_TYPE1 mSysInfoType1 = {
   6,    // Family String
 };
 CHAR8  *mSysInfoType1Strings[] = {
-  "Nokia",
-  "Lumia 830",
-  "RM-984",
+  "Microsoft",
+  "Lumia 640",
+  "RM-1072",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "RM-984",
   "Phone",
@@ -176,9 +176,9 @@ SMBIOS_TABLE_TYPE2  mBoardInfoType2 = {
   { 0 }                     // ContainedObjectHandles[1];
 };
 CHAR8  *mBoardInfoType2Strings[] = {
-  "Nokia",
-  "Lumia 830",
-  "RM-984",
+  "Microsoft",
+  "Lumia 640",
+  "RM-1072",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
   "",
@@ -207,7 +207,7 @@ SMBIOS_TABLE_TYPE3  mEnclosureInfoType3 = {
   { { 0 } },    // ContainedElements[1];
 };
 CHAR8  *mEnclosureInfoType3Strings[] = {
-  "Lumia 830",
+  "Lumia 640",
   "1",
   "0bc52bb9-9473-4875-be2a-3973076c20e2",
   "",
