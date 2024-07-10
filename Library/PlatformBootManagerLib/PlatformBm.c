@@ -769,7 +769,7 @@ PlatformBootManagerWaitCallback (
   Status = BootLogoUpdateProgress (
              White.Pixel,
              Black.Pixel,
-             L"Press ESCAPE for boot options wait where is the ESC key here",
+             L"Press POWER for boot options wait where is the ESC key here",
              White.Pixel,
              (Timeout - TimeoutRemain) * 100 / Timeout,
              0
