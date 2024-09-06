@@ -118,6 +118,21 @@ READ_LOCK_STATUS   = TRUE
   # Shell
   INF ShellPkg/Application/Shell/Shell.inf
 
+  # ACPI
+  FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/csrt.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/dbg2.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/dsdt.aml
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/facp.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/facs.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/fpdt.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/gtdt.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/madt.acp
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/ssdt.aml
+    SECTION RAW = Lumia830Pkg/AcpiTables/Generated/TPM2.acp
+    SECTION UI = "AcpiTables"
+  }
+
 [FV.FVMAIN_COMPACT]
 FvAlignment        = 8
 ERASE_POLARITY     = 1
