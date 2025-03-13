@@ -13,3 +13,4 @@ A partially working kernel is available here : https://github.com/Mainline4Lumia
  - Gustave Monce for telling me that rpmdxe driver is needed to bring up regulators on linux and helping me to get it to work<br/> 
  - Imbushuo for creating BootShim and helping with memory adresses for rpmdxe<br/>
  - Heathcliff74 for creating WPInternals<br/>
+ - Credits to Anuel AA for the cover of the album "Real Hasta La Muerte" and I decided to use it as a Boot Logo because I like Anuel AA
