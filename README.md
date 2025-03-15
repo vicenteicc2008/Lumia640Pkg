@@ -1,6 +1,9 @@
 # Lumia640Pkg
 WIP Custom ARM UEFI firmware for Lumia 640 LTE but should work on 3G version, based on Lumia830Pkg by Dominduchami : https://github.com/Dominduchami/Lumia830Pkg
 
+# Why i am not using Lumia830Pkg for my 640?
+Because I prefer to support the Lumia 640 separately since I want to add my own changes and I also wanted to make the UEFI unique, so that's why I decided to fork the Lumia830Pkg for the 640.
+
 # Current Status
 Edk2 boots correctly, but it is not capable of loading windows (just use unlocked stock uefi for that). 
 Linux boots with patches created by Bartosz Dudziak (https://patchwork.kernel.org/project/linux-arm-msm/list/?series=&submitter=193041&state=*&q=&archive=both&delegate=) and a simple dts (only UART and EMMC is enabled for now, display works via efiframebuffer).
