@@ -39,11 +39,6 @@
 [PcdsFixedAtBuild.common]
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Some Random Trap Artist In Chile"
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"1.01"
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemId|"QCOM  "
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemTableId|0x324B44454D4F4351
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemRevision|0x00000001
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultCreatorId|0x4D4F4351
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultCreatorRevision|0x00000001
 
 # gEmbeddedTokenSpaceGuid.PcdPrePiCpuMemorySize|32
   gEmbeddedTokenSpaceGuid.PcdPrePiCpuIoSize|0
@@ -443,9 +438,6 @@ VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePol
   
   # ACPI AND SMBIOS
   Lumia830Pkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
-  MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
-  MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
-  MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
   # Shell
   ShellPkg/Application/Shell/Shell.inf {
     <LibraryClasses>
