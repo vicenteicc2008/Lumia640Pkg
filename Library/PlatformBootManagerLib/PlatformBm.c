@@ -772,7 +772,7 @@ PlatformBootManagerAfterConsole (
   //
   // Enumerate all possible boot options.
   //
-  EfiBootManagerRefreshAllBootOption ();
+  // EfiBootManagerRefreshAllBootOption ();
 
   //
   // Register UEFI Shell
