@@ -37,7 +37,7 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdSupportUpdateCapsuleReset|TRUE
 
 [PcdsFixedAtBuild.common]
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Some Random Trap Artist In Chile"
+  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Some Random Trap Singer In Chile (I Love RHLM)"
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"1.01"
 
 # gEmbeddedTokenSpaceGuid.PcdPrePiCpuMemorySize|32
